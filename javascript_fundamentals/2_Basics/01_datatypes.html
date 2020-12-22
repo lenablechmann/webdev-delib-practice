@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Data Types Practice</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // following https://javascript.info/types
+
+    // PRIMITIVE TYPES (because they can only contain one thing at a time)
+    // The 3 types of strings "" '' and ``
+    let normal_str1 = "I am just your normal string.";
+    let normal_str2 = 'I am pretty normal too.';
+    let fancy_str = `I am the formatted string and can embed variables: ${normal_str1} AND ${normal_str2}`;
+    console.log(normal_str1);
+    console.log(normal_str2);
+    console.log(fancy_str);
+
+    // you can get bools from comparisons expressed this way
+    let really = 5 < 1;
+    console.log(really); // puts "false"
+
+    // if you don't assign value to a variable you'll get "undefined"
+    let mystery;
+    console.log(mystery); // puts "undefined"
+
+    // if you want an empty variable, you use null
+    mystery = null;
+    console.log(mystery);
+
+
+ </script>
+</body>
+
+</html>

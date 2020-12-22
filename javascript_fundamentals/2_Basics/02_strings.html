@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Strings Practice</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <script>
+        // following https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings
+
+        // Escaping characters in a string with \
+        let escape = 'I\'ve got some bad news about this escape.';
+        console.log(escape);
+
+        // You can turn numbers into strings with .toString()
+        let num = 250;
+        let num2 = num + 3; // num2 = 252
+        num = num.toString(); // turns num into string
+        console.log(num + num2); // puts 250253 since it concatenates strings
+
+        // complex expressions in template strings (former formatted strings)
+        let examScore = 45;
+        let examHighestScore = 70;
+        // mind the shorthand of (condition) ? (what happens if true) : (what happens if false) is the same as in C
+        // Also template literals work fine with line breaks
+        examReport = `You scored ${examScore}/${examHighestScore} 
+        (${Math.round((examScore / examHighestScore * 100))}%). 
+        ${examScore > 49 ? 'Well done, you passed!' : 
+        'Bad luck, you didn\'t pass this time.'}`;
+        console.log(examReport);
+
+        // STRING METHODS following https://www.w3schools.com/js/js_string_methods.asp
+        // methods are built in functionalities for objects, apparently everything is an object in JS, so you can apply methods to things
+
+        // finding out the string length with .length
+        let lengthy_text = "adhsjashgwejghslkjdghasdlhfawelkf";
+        console.log(lengthy_text.length); // puts 33
+
+        // finding a substring with indexOf
+        console.log(lengthy_text.indexOf("ash")); // returns the first occurance of ash, 5
+
+        // same with the last occurence .lastIndexOf only it searches backwards
+        console.log(lengthy_text.lastIndexOf("d")); // puts 23
+
+        // you can also start searching from a certain position
+        console.log(lengthy_text.indexOf("a", 16)); // puts 21
+
+        // If you want to use RegEx, you'll want to use .search though
+        console.log(lengthy_text.search("ash")); // puts 5 just like indexOf
+
+        // Extracting string parts with slice(start, end) ; substring(start, end) ; substr(start, end)
+        // slices and returns the brand new string
+        let needs_a_slicin = "Hello, uh, so... How you doin?";
+        let sliced = needs_a_slicin.slice(17, 31);
+        console.log(sliced); // puts "How you doin?"
+
+        // Negative means you count from the end (won't work in IE)
+        sliced = needs_a_slicin.slice(-13);
+        console.log(sliced); // puts "How you doin?"
+
+        // substring is the same as slice, minus the neg parameters
+
+        // substr accepts length of a slice as a second param (omit it, and it will slice off the beginning)
+        console.log(needs_a_slicin.substr(7, 2)); // puts "uh"
+        console.log(needs_a_slicin.substr(7)); // puts uh, so... How you doin?
+        // or use negatives if you want to rid off the start
+        console.log(needs_a_slicin.substr(-13));// puts "How you doin?" just like slice
+
+        // replacing string content (case sensitive)
+        let fav_color = "My favorite color is blue blue blue.";
+        console.log(fav_color.replace("blue", "red")); // puts My favorite color is red blue blue.
+
+        // use regex to avoid case sensitivity
+        console.log(fav_color.replace(/BLUe/i, "red")); // puts My favorite color is red blue blue.
+        // or use g to make a global replacement
+        console.log(fav_color.replace(/bLue/gi, "red")); // puts My favorite color is red red red.
+
+        // Similar to C you can use a toupper and tolower functions
+        console.log(fav_color.toUpperCase()); 
+        
+        // There is also a cat fu
+        console.log(fav_color.concat("But also red.")) // puts My favorite color is blue blue blue.But also red.
+
+        // Remove white spaces with .trim
+        let spaaaace = "      hullo       ";
+        console.log(spaaaace);
+        console.log(spaaaace.trim());
+
+        // You can pad out strings (useful for numerical strings)
+        let a = "4";
+        console.log(a.padStart(6, 0)); // puts 000004
+        
+        // Find a char at a specified index
+        console.log(fav_color.charAt(5)); // puts v
+        console.log(fav_color.charCodeAt(5)); // returns unicode of v
+        console.log(fav_color[5]); // still v, but so C amirite. ppl recommend not using it
+
+        // Strings aren't arrays, if you want one, make one with split 
+        let future_array = "e|x|a|m|p|l|e";
+        let array = future_array.split("|"); // or split in chars by just using "" as param
+
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
