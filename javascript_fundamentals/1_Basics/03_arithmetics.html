@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arithmetics Practice</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // following https://www.w3schools.com/js/js_arithmetic.asp
+
+    // finding a remainder
+    console.log("The remainder of 4/3 is " + (4 % 3)); //puts 1
+    let increment_me = 5;
+    console.log(increment_me); // puts 5
+    increment_me++;
+
+    console.log(increment_me); // puts 6
+    let exponent = increment_me ** 2;
+
+    console.log(exponent); // puts 36 because 6^2
+    console.log(Math.pow(increment_me, 2)); // also puts 36
+
+    // finding out precedence in JS
+    console.log(3 + 5 * 10); //puts 53, so normal mathematical approach
+
+    // recap with https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math
+    console.log("___________");
+
+    // this is how you check for a type in JS
+    console.log(typeof (increment_me)); // puts "number"
+    let lotsOfDecimal = 1.766584958675746364;
+    console.log(lotsOfDecimal);
+    // Applying a rounding method to the number
+    let twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+    console.log(twoDecimalPlaces);
+    
+    // turning string into number:
+    let num_string = "30";
+    console.log(Number(num_string) + 3); // puts "33" instead of string concat
+  </script>
+</body>
+
+</html>

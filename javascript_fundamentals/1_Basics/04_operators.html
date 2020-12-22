@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Operators Practice</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // following https://javascript.info/operators
+
+    // unary operators:
+    let three = 3;
+    three = -three;
+    console.log(three); // puts "-3"
+
+    // exponents
+    let a = 2
+    console.log(a**2); // puts 4
+    console.log(a**3); // puts 8
+    console.log(a**4); // puts 16
+
+    // transforming non numbers with the help of unary operator
+    console.log(true); // puts true
+    console.log(+true); // puts 1
+    console.log(+""); // puts 0
+
+    // this can be used to transform strings into numbers quickly without Number()
+    apples = "2";
+    oranges = "3";
+    console.log(apples + oranges); //puts 23 due to string concat
+    console.log(+apples + +oranges); // puts 5 since strings are now numbers
+
+    
+
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Numbers Practice</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // following https://www.w3schools.com/js/js_numbers.asp
+    // assigning numbers + concatenating strings. Don't have to declare floats etc. 
+    // Output can be checked via dev tools, console
+    // ALL js numbers are 64bit floats
+    let sci_notation_p = 124e6;
+    let sci_notation_n = 124e-6;
+    let sci_string = "The scientific notation is as follows:";
+    console.log(sci_string + sci_notation_n + " for neg " + sci_notation_p + " for pos");
+
+    // trying out multiple console logs
+    console.log("Here goes a sum of 1 and 2: " + 1 + 2)
+    console.log("The previous attempt saw numbers as strings")
+    console.log("but here is the sum with parenthesis (1 + 2): " + (1+2))
+
+    // String arithmetics
+    let x = "2";
+    let y = "4";
+    console.log(x+y); // puts "24", cause + is used to concat strings
+    console.log(x/y); // puts "0.5", transforms em to numbers
+    console.log(x*y); // puts "8"
+    console.log(x-y); // puts "-2"
+
+    // NaN
+    let impossible = 100/"Orange";
+    console.log(impossible); // puts "NaN"
+
+    // testing NaN while C-ing through conditionals
+    if(isNaN(impossible))
+    {
+        console.log("Apples and oranges");
+    }
+    else
+    {
+        console.log("Everything is fine");
+    }
+
+    // testing infinity
+    console.log(2/0); // puts "infinity"
+    console.log(-2/0); // puts "-infinity"
+  </script>
+</body>
+</html>
