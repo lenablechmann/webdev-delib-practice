@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Switch Practice</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <script>
+        // following https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript
+        // getting the current day of the week number
+        const today = new Date().getDay();
+        console.log(today);
+
+        // Using a switch statement similar to C
+        switch (today) {
+            case 1:
+                console.log("So it's Monday.");
+                break;
+            case 2:
+                console.log("It's Tuesday then.");
+                break;
+            case 3:
+                console.log("It's Wednesday."); 
+                break;
+            case 4:
+                console.log("It's Thursday."); 
+                break;
+            case 5:
+                console.log("It's Friday."); 
+                break;
+            case 6:
+                console.log("It's Weekend."); 
+                break;
+            case 7:
+                console.log("Tommorow is Monday."); 
+                break;
+            default: console.log("huh");
+        }
+
+    </script>
+</body>
+
+</html>

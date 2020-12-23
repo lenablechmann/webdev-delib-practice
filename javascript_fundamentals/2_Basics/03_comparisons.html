@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Comparison Practice</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // following https://javascript.info/comparison
+    
+    // Basic comparisons (and practicing template strings):
+    let result = 2==2;
+    console.log(`Does 2 equal 2? ${result}`);
+    result = 2 < 2;
+    console.log(`Is 2 less than 2? ${result}`);
+
+    // String comparisons (apparently works similarly to strcmp in C, as it also compares unicode):
+    console.log(`Is a equal to A? ${"a" == "A"};
+    What about "dawn" equal "dawn" ${"dawn" === "dawn"};
+    And c bigger than C ${"c" > "C"}`);
+
+    // Comparison of different types (js turns chars into numbers if you use normal equality, strict one doesn't do dat)
+    // Normal inequalities turn null to 0 and undefined to NaN, while normal equality is whacky for null
+    console.log(`Is "2" === 2? ${"2" === 2};
+    what about "2" == 2? ${"2" == 2}
+    Is null == undefined? ${null == undefined}
+    Is null bigger than 0? ${null > 0}
+    is it >= 0? ${null >= 0}
+    Then surely null == 0? ${null == 0}`) // null only == undefined
+
+    // undefined doesnt compare to anything, vause it gets converted to NaN
+    console.log (`Is undefined less or equal to infinity? ${undefined <= Infinity}`)
+
+
+
+ </script>
+</body>
+
+</html>

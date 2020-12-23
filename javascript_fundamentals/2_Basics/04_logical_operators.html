@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Logical Operators Practice</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // following https://javascript.info/logical-operators
+
+    // JS shows the last value if all are falsy, and the first truthy value otherwise
+    // It also follows a short circuit style evaluation, once it gets a true, it ignores all other statements
+
+    let first_name = "";
+    let last_name = "";
+    let nickname = "Hasi";
+    console.log(first_name || last_name || nickname || "Anon"); // Puts "Hasi"
+    nickname = "";
+    console.log(first_name || last_name || nickname || "Anon"); // puts "Anon"
+
+   // && operator is similar to || but returns the first falsy statement
+   // after evaluating from left to right
+   console.log(1 && 0); // returns 0
+   console.log(1 && 5); // returns 5
+   // precedence of && is higher than ||
+   console.log(1 && 2 || 0 && 2); // returns 2
+
+   let age = 20;
+   if (age >= 14 && age <= 90)
+   {
+       console.log("You can make an account.");
+   }
+   else
+   {
+       console.log("nope");
+   }
+   let age_2 = 10;
+   if(!(age_2 >= 14 && age_2 <= 90))
+   {
+     console.log("kiddo");
+   }
+   else{
+     console.log("heya oldie");
+   }
+ </script>
+</body>
+
+</html>

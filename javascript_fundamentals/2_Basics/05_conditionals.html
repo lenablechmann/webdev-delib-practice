@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Conditionals Practice</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // following https://javascript.info/ifelse
+    // conditionals with ?: variable = (condition) ? value1 : value2;
+    let age = 23;
+    let access = (age > 18) ? console.log("You can get an account") : console.log("No account for you");
+
+    // You can chain conditions after :
+    let your_age = 20;
+    (your_age < 3) ? console.log("you are a baby") :
+    (your_age < 18) ? console.log("Hello, kiddo") : console.log("Good Day.");
+
+    // Using the if..else construct, write the code which asks: 
+    // ‘What is the “official” name of JavaScript?’
+    // If the visitor enters “ECMAScript”, then output “Right!”, 
+    // otherwise – output: “Didn’t know? ECMAScript!”
+
+    let official_js = prompt("What is the 'official' name of JavaScript?" , "");
+
+    if (official_js == "ECMAScript")
+    {
+        alert("That's right!");
+    }
+    else
+    {
+        alert("Nope, ECMAScript");
+    }
+
+    // rewriting a longer else if chunk into ? conditionals
+    let login = prompt("What's your log in?", ""); 
+    console.log(login);
+
+    let message = (login == "employee") ? "Hello" :
+    (login == "director") ? "Greetings" : 
+    (login == "") ? "No login" : "Fail";
+
+    console.log(message);
+
+ </script>
+</body>
+
+</html>
