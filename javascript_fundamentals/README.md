@@ -6,6 +6,6 @@ Deliberate practice of vanilla javascript foundations (single focus point per ex
 - **Basics 2**: Data types, string formatting, comparisons, logical operators, conditionals
 - **Basics 3**: Functions, default parameters, return values
 - **Basics 4**: Loops, arrays
-- **DOM** manipulation: selectors, methods
-- **Objects**
+- **Basics 5** DOM manipulation: selectors, methods, event handlers
+- **Basics 6** Objects and more array magic
 
