@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>turn into phone number</title>
+</head>
+
+<body>
+    <script>
+        function phoneNumber(someArray) {
+            // Write a function that accepts an array of 10 integers (between 0 and 9)
+            let joinedString = someArray.join("");
+            console.log(joinedString);
+            const firstThree = joinedString.slice(0,3);
+            const nextThree = joinedString.slice(3,6);
+            const lastFour = joinedString.slice(6);
+            console.log(`(${firstThree}) ${nextThree}-${lastFour}`)
+        }
+        phoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]); // => returns "(123) 456-7890"
+
+    </script>
+</body>
+
+<
