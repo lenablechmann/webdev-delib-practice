@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>palindrome fun</title>
+</head>
+
+<body>
+    <script>
+        function palindrome(someString) {
+            // write a function that checks wether a string is a palindrome
+            // create new String but without whitespace and special chars
+            let newString = someString.toLowerCase().replace(/[^a-z0-9]/g, "");
+            console.log(newString);
+
+            for (let fromStart = 0, fromEnd = newString.length - 1; fromStart <= newString.length / 2; fromStart++, fromEnd--) {
+                // comparing goring from left chars to going from the right, 
+                // only need to go to the middle where theyll meet
+                if (newString[fromStart] !== newString[fromEnd]) {
+                    console.log(newString[fromEnd] + " " + newString[fromStart])
+                }
+            }
+
+        }
+        palindrome("Animal loots foliated detail of stool lamina.")
+
+    </script>
+</body>
+
+</html>
