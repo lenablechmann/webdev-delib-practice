@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>find the oldest</title>
+</head>
+
+<body>
+    <script>
+        // task: write a function, that returns the oldest person of the array of objects
+        const peopleA = [
+            {
+                name: 'Carly',
+                yearOfBirth: 1066,
+            },
+            {
+                name: 'Ray',
+                yearOfBirth: 1962,
+                yearOfDeath: 2011
+            },
+            {
+                name: 'Jane',
+                yearOfBirth: 1912,
+                yearOfDeath: 1941
+            },
+        ];
+
+
+        let findTheOldest = function (people) {
+            // getting the current year
+            const thisYear = (new Date().getFullYear())
+            // found a way to access and modify the copy of people
+            people.forEach(person => {
+                // creates a new property that calculates length of life 
+                // even if the person still alive
+                if(person.hasOwnProperty("yearOfDeath")){
+                    person.life = person.yearOfDeath - person.yearOfBirth;
+                }
+                else {
+                    person.life = thisYear - person.yearOfBirth;
+                }
+            });
+
+            // sorting the array of objects by length of life
+            let sortedPeople = people.sort(function (personA, personB) {
+                return personB.life - personA.life;
+            });
+
+            console.table(people);
+            console.log(people[0]); // only return the first /oldest object
+        };
+
+        findTheOldest(peopleA);
+    </script>
+</body>
+
+</html>
