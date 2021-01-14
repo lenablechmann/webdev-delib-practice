@@ -7,8 +7,14 @@ function book(title, author, yearPublished, description, readStatus){
     this.yearPublished = yearPublished;
     this.description = description;
     this.readStatus = readStatus;
+    this.printBookInfo = function(){
+        console.log(`${title} from ${author} published in ${yearPublished} is all about ${description}.`)
+    };
 }
 
-const bookFirst = new book("Modern C", "King", 1990, "Pointers, pointers everywhere", true);
+const bookFirst = new book("Modern C", "King", 1990, "pointers, pointers everywhere", true);
 // prints the whole object, wow
-console.log(bookFirst);
+// console.log(bookFirst);
+
+// calls the function
+bookFirst.printBookInfo();
