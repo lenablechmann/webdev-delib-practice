@@ -9,7 +9,7 @@ function Book(title, author) {
   this.title = title;
   this.author = author;
   this.printBookInfo = function () {
-    console.log(`You've mentioned ${title} from ${author}.`);
+    return (`You've mentioned ${title} from ${author}.`);
   };
 }
 
@@ -35,4 +35,13 @@ function addBookToObj(ev) {
     booksCollection.push(userBookObj);
     // console.log(booksCollection);
 
+    // accessing all forms inside document and resetting em
+    document.querySelector('form').reset();
+    console.warn("added", {booksCollection});
+    const booksDisplay = document.querySelector(".display");
+    // displaying the array of objects as a string
+    booksDisplay.textContent = JSON.stringify(booksCollection, '\t', 2);
+
+    // can also save it in the local storage now
+    localStorage.setItem('bookList', JSON.stringify(booksCollection));
 }
