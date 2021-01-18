@@ -1,5 +1,5 @@
 // Object.create() makes a new object
-// while using the existing object as the prototype of the new object
+// while using the existing object (in the ()) as the prototype of the new object
 
 const cube = {
     equalSides: true,
@@ -20,4 +20,8 @@ rubiksCube.colors = "mixed";
 
 // has access to the method from cube
 rubiksCube.printCubeProps();
+
+// we can also check if some object is a prototype of the other object
+// will print true, cause we made rubiks cube out of cube as a prototype
+console.log("Is rubiks cube actually a cube? " + cube.isPrototypeOf(rubiksCube));
 
