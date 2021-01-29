@@ -1,6 +1,6 @@
 # Learning Goals:
-- factory functions as alternative to constructors
-- understand downsides and bugs of constructors
+- factory functions as alternative to constructors (*object inheritance and creation are unified into one function*)
+- understand downsides and bugs of constructors (*objects become instances of the constructor functions, which isn't intuitive*)
 - inheritance in factory functions
 - JS scope + ES6 changes
 - private functions
