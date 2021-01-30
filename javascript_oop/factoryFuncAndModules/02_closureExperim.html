@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Closures</title>
+    </head>
+    <body>
+        <p>Click the buttons and watch the variables change in the console</p>
+        <button id="btn1">First</button>
+        <button id="btn2">Second</button>
+        <button id="btn3">Second</button>
+
+        <script>
+            let number = 30;
+
+            addFive(number);
+
+            function addFive(num) {
+                // number can be seen from here, since it's global
+                num += 3; 
+                console.log(num); // should be 33
+
+                const btn1 = document.querySelector("button#btn1");
+                const btn2 = document.querySelector("button#btn2");
+                const btn3 = document.querySelector("button#btn3");
+
+                // all these functions increment num, as if they have a pointer to it
+                // the power of closures
+                btn1.addEventListener("click", function (){
+                    num++;
+                    console.log(num); 
+                });
+                btn2.addEventListener("click", function (){
+                    num++;
+                    console.log(num); 
+                });
+                btn3.addEventListener("click", function (){
+                    num++;
+                    console.log(num); 
+                });
+            }
+
+        </script>
+    </body>
+</html>
