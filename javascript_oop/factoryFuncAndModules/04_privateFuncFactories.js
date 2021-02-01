@@ -37,8 +37,21 @@ const Player = (playerName, level, strength, luck) => {
 const steve = Player("stevie", 10, 99, 25);
 const jeff = Player("jeoff", 8, 16, 99);
 
-console.log("first move: ");
-steve.attack(jeff);
-console.log("second move: ");
-jeff.attack(steve);
+// console.log("first move: ");
+// steve.attack(jeff);
+// console.log("second move: ");
+// jeff.attack(steve);
 // console.dir(jeff);
+
+// some inheritance practice with factory functions
+const Fashion = (playerName) => {
+    // creating a player obj with the factory function at the beginning, and pulling out the getName func
+    const {getName} = Player("reb", 11, 34 ,99);
+    const determineFashion = () => console.log("something very fashionable");
+    return {determineFashion, getName};
+}
+
+const becca = Fashion("rebecca");
+console.log(becca.getName()); // reb
+becca.determineFashion(); // something very fashionable
+
