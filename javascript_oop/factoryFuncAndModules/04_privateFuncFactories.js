@@ -46,6 +46,7 @@ const jeff = Player("jeoff", 8, 16, 99);
 // some inheritance practice with factory functions
 const Fashion = (playerName) => {
     // creating a player obj with the factory function at the beginning, and pulling out the getName func
+    // this way we can include new functions/methods into our obj
     const {getName} = Player("reb", 11, 34 ,99);
     const determineFashion = () => console.log("something very fashionable");
     return {determineFashion, getName};
