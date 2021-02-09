@@ -1,0 +1,12 @@
+{
+  "name": "js_testing",
+  "version": "1.0.0",
+  "description": "- [ ] learn how to use jest for javascript - [ ] write a few simple functions and test them with jest",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
