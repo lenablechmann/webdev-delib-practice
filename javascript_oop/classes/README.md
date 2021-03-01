@@ -1,7 +1,7 @@
 ## Javascript Classes
 Even though there are no "real" OOP kind of classes in JS (apparently),
-there is a syntactical sugarcoat for constructors that is called classes in JS.
-My goal is to learn to use them, mostly so I can navigate and understand any JS codebase I encounter.
+it is heavily used in React so it's important to know them well.
+My goal is to learn how and when to use them, mostly so I can navigate and understand any JS codebase I encounter.
 
 ### Pros and Cons of Classes in Javascript
 tbd
