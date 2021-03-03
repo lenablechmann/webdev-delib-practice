@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import myName from './myName'
 
 function component () {
     // a function that creates a div element with "Hello webpack" content
@@ -10,5 +11,13 @@ function component () {
     return element;
 }
 
+function nameComponent () {
+    const div = document.createElement('div');
+    div.textContent = myName('Lena');
+
+    return div;
+}
+
 // appends that div in the html
 document.body.appendChild(component());
+document.body.appendChild(nameComponent());

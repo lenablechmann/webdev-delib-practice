@@ -26,7 +26,18 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction component () {\n    // a function that creates a div element with \"Hello webpack\" content\n    const element = document.createElement('div');\n\n    // lodash imported above in the script\n    element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'webpack'], ' ');\n\n    return element;\n}\n\n// appends that div in the html\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpackPractice/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _myName__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myName */ \"./src/myName.js\");\n\n\n\nfunction component () {\n    // a function that creates a div element with \"Hello webpack\" content\n    const element = document.createElement('div');\n\n    // lodash imported above in the script\n    element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'webpack'], ' ');\n\n    return element;\n}\n\nfunction nameComponent () {\n    const div = document.createElement('div');\n    div.textContent = (0,_myName__WEBPACK_IMPORTED_MODULE_1__.default)('Lena');\n\n    return div;\n}\n\n// appends that div in the html\ndocument.body.appendChild(component());\ndocument.body.appendChild(nameComponent());\n\n//# sourceURL=webpack://webpackPractice/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/myName.js":
+/*!***********************!*\
+  !*** ./src/myName.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Practicing exporting modules with JS and webpack\nconst myName = (name) => 'Hi, my name is ' + name;\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myName);\n\n//# sourceURL=webpack://webpackPractice/./src/myName.js?");
 
 /***/ })
 
