@@ -1,0 +1,19 @@
+{
+  "name": "webpackPractice",
+  "version": "1.0.0",
+  "description": "Following the official [documentation](https://webpack.js.org/guides/getting-started/) provided on the webpack site.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
