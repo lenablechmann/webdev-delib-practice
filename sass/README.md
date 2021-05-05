@@ -3,6 +3,9 @@ Learning SASS/SCSS by following along various tutorials online and trying out st
 ## Learning goals
 - Learn if and how SASS improves upon CSS
 - find out how to compile SASS back to CSS
+    1. install sass with `sudo npm i -g sass`
+    1. use sass commands like `sass --watch sass/scss/style.scss sass/css/style.css` to compile file 1 to css, gotta give it the path to both files
+`
 - build a simple project with base SASS 
 
 ## SCSS Notes:
